@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>discord project login</head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <label>username: </label>
+            {{ form.username }}
+            <label>Password: </label>
+            {{ form.password }}
+            <button type="submit">login</button>
+        </form>
+    </body>
+</html>
