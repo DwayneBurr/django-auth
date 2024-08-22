@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
+from django.http import HttpResponse
 
 def login_view(request):
     if request.method == 'POST':
@@ -17,3 +18,7 @@ def login_view(request):
     else: 
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
+
+def home_view(request):
+    request.method == 'GET'
+    return HttpResponse('welcome to the home page')
