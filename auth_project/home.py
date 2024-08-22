@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 
 
-def home():
-    return HttpResponse('welcome to home page')
+def home(request):
+    request.method == 'GET'
+    return HttpResponse('welcome to the home page')
